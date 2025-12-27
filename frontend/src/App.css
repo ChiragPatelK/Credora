@@ -1,0 +1,263 @@
+/* ==============================================
+CREDORA - EXPENSE TRACKER (Optimized Global Styles)
+Clean, Responsive, Platform-Independent UI
+============================================== */
+
+/* Root Variables */
+:root {
+  --bg-color: #111827;
+  --primary-card-bg: #1f2937;
+  --accent-color: #4f46e5;
+  --accent-hover: #4338ca;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --border-color: #374151;
+  --glow-color: rgba(79, 70, 229, 0.4);
+  --delete-color: #ef4444;
+  --delete-hover: #dc2626;
+  --edit-color: #3b82f6;
+  --edit-hover: #2563eb;
+  --success-color: #10b981;
+  --font-primary: "Poppins", sans-serif;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  background: var(--bg-color);
+  font-family: var(--font-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Scrollbar (minimal aesthetic) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+/* Layout Helpers */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* ===============================
+AUTH PAGES (Login / Register)
+=============================== */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #0b0b16 0%, #111827 100%);
+  padding: 2rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  background: var(--primary-card-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 0 35px var(--glow-color);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+}
+
+.form-container input {
+  width: 100%;
+  padding: 0.9rem;
+  margin: 0.6rem 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--glow-color);
+}
+
+.form-container button {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--accent-color);
+  color: var(--text-primary);
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form-container button:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.form-container p {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.form-container a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+.form-container a:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+DASHBOARD + CARDS
+=============================== */
+.dashboard {
+  padding: 2rem;
+}
+
+.card {
+  background: var(--primary-card-bg);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* ===============================
+BUTTONS
+=============================== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: var(--text-primary);
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-danger {
+  background: var(--delete-color);
+  color: var(--text-primary);
+}
+.btn-danger:hover {
+  background: var(--delete-hover);
+}
+
+.btn-success {
+  background: var(--success-color);
+  color: #fff;
+}
+.btn-success:hover {
+  opacity: 0.9;
+}
+
+/* ===============================
+RESPONSIVE DESIGN
+=============================== */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    max-width: 90%;
+  }
+
+  .form-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-container input,
+  .form-container button {
+    font-size: 0.95rem;
+  }
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #b3b3b3;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: #9b6dff; /* theme accent color */
+}
