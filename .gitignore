@@ -3,7 +3,8 @@
 # =========================================
 
 # Node modules (big dependency folder)
-node_modules/
+/frontend/node_modules/
+/backend/node_modules/
 
 # Build output (React / Vite / Next / Express)
 build/
